@@ -29,13 +29,13 @@ It allows users to **add**, **edit**, and **delete** chats while providing a cle
 ![Add Chat](./screenshots/addChat.png)
 
 ### All Chats
-![All Chats](./screenshots/allChat.png)
+![All Chats](./screenshots/allChats.png)
 
 ### Edit Chat
 ![Edit Chat](./screenshots/editChat.png)
 
 ### Confirmation Dialogue
-![Confirmation Dialogue](./screenshots/conformDialogue.png)
+![Confirmation Dialogue](./screenshots/confirmDialogue.png)
 
 ---
 
