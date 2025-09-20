@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mini WhatsApp</title>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>All Chats</h1>
+
+      <form
+        method="POST"
+        action="/chats?_method=DELETE"
+        onsubmit="toConfirmAllDel(event)"
+      >
+        <button type="submit" class="delBtn">Delete All</button>
+      </form>
+    </div>
+
+    <hr />
+
+    <% for(let chat of chats){ %>
+    <div class="chat">
+      <p>Send by: <i> <%= chat.from %> </i></p>
+      <div class="msg">
+        <p><%= chat.msg %></p>
+
+        <div class="icons">
+          <!-- edit form for msg -->
+          <form method="GET" action="/chats/<%= chat._id %>/edit">
+            <button type="submit" class="editBtn">
+              <i class="fas fa-edit"></i>
+            </button>
+          </form>
+          <!-- del form for msg -->
+          <form
+            method="POST"
+            action="/chats/<%= chat._id %>?_method=DELETE"
+            onsubmit="toConfirm(event)"
+          >
+            <button type="submit" class="editBtn">
+              <i class="fas fa-trash"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <p>Recieved by: <i> <%= chat.to %> </i></p>
+      <hr />
+      <p><%= chat.created_at.toString().split(" ")[4] %></p>
+      <p><%= chat.created_at.toString().split(" ").splice(0, 4).join(" ") %></p>
+    </div>
+    <% } %>
+
+    <form method="get" action="/chats/new">
+      <button class="btn" title="Add Chat">Add Chat</button>
+    </form>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

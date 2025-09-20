@@ -1,0 +1,132 @@
+body{
+    margin: 20px;
+    box-sizing: border-box;
+}
+.chat{
+    background-color:rgb(189, 255, 246);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 70vw;
+    min-width: 60vw;
+}
+.chat:hover, .chat:active{
+    box-shadow: 2px 2px 10px #264b3e;
+}
+.msg{
+    background-color:#1394c7;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+.msg:hover, .msg:active{
+    background-color:#1280ac;
+}
+
+.btn {
+    border-radius: 20px;
+    background-color: #1394c7;
+    color: #fff;
+    font-weight: bolder;
+    padding: 10px 20px;
+    position: fixed;
+    right: 4vw;
+    bottom: 4vw;
+    cursor: pointer;
+
+    border: none;
+    box-shadow: 2px 2px 2px #2a2a2a, -2px -2px 2px #2a2a2a;
+
+    border: 2px solid #1394c7;
+    transition: all 1s ease-in-out;
+    font-size: 1.06rem;
+}
+.btn:hover{
+    text-decoration: underline dotted;
+}
+
+/* ------------------------------------- Add Chat CSS ----------------------------------------- */
+.colorfulBody{
+    background-color:antiquewhite;
+}
+
+.formChat{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+input, textarea{
+    background-color: rgb(248, 230, 207);
+    width: 70vw;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid #1394c7;
+    outline: none;
+}
+textarea{
+    height: 30vh;
+}
+input:focus, textarea:focus{
+    border: 2px solid #14c5c5;
+    background-color: inherit;
+}
+.sendBtn{
+    background-color: #1394c7;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 2px 2px #2a2a2a;
+
+    font-weight: bold;
+    cursor: pointer;
+    width: 73vw;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.05rem;
+}
+.sendBtn:hover, .sendBtn:active{
+    background-color: #1280ac;
+}
+
+/* EDit button */
+.editBtn{
+    /* box-shadow: 2px 2px 2px #bababa; */
+    background-color: inherit;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    gap: 20px
+}
+
+.delBtn{
+    border-radius: 20px;
+    background-color: #da1313;
+    color: #fff;
+    font-weight: bolder;
+    padding: 10px 20px;
+    
+    cursor: pointer;
+
+    border: none;
+    box-shadow: 2px 2px 2px #2a2a2a;
+
+    font-size: 1.06rem;
+}
+.delBtn:hover{
+    background-color: #c40f0f;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
