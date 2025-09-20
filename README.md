@@ -45,21 +45,19 @@ It allows users to **add**, **edit**, and **delete** chats while providing a cle
    ```bash
    git clone <your-repo-link>
    cd MongoApp
-````
+   ````
 
 2. **Install dependencies**
-
    ```bash
    npm install
    ```
 
 3. **Run the app**
-
    ```bash
    node init.js
    ```
 
-   The app will be running at: **[http://localhost:8080](http://localhost:8080)**
+The app will be running at: **[http://localhost:8080](http://localhost:8080)**
 
 ---
 
